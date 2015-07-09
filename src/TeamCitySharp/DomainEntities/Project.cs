@@ -17,5 +17,6 @@
 
         public BuildTypeWrapper BuildTypes { get; set; }
         public Parameters Parameters { get; set; }
+        public Projects Projects { get; set; }
     }
 }
