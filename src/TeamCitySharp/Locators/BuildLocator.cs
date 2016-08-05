@@ -86,12 +86,17 @@ namespace TeamCitySharp.Locators
                 return "id:" + Id;
             }
 
-            if (Number != null)
+            if (Number != null && BuildType == null)
             {
                 return "number:" + Number;
             }
 
             var locatorFields = new List<string>();
+
+            if (Number != null)
+            {
+                locatorFields.Add("number:(" + Number + ")");
+            }
 
             if (BuildType != null)
             {
